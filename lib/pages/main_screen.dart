@@ -31,7 +31,9 @@ class MainScreen extends StatelessWidget {
                 child: Text("About Me",style: TextStyle(fontSize: 30.0,fontFamily: "Billabong")),
                 shape: RoundedRectangleBorder(side: BorderSide(color: Colors.transparent)), 
                 onPressed: () {
-                  AboutMe();
+                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+                    return AboutMe();
+                  }));
                 },
               ),
               FlatButton(
@@ -39,7 +41,9 @@ class MainScreen extends StatelessWidget {
                 child: Text("Education",style: TextStyle(fontSize: 30.0,fontFamily: "Billabong")),
                 shape: RoundedRectangleBorder(side: BorderSide(color: Colors.transparent)),
                 onPressed: () {
-                  Education();
+                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+                    return Education();
+                  }));
                 },
               ),
               FlatButton(
@@ -47,7 +51,9 @@ class MainScreen extends StatelessWidget {
                 child: Text("Skills",style: TextStyle(fontSize: 30.0,fontFamily: "Billabong")),
                 shape: RoundedRectangleBorder(side: BorderSide(color: Colors.transparent)),
                 onPressed: () {
-                  Skills();
+                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+                    return Skills();
+                  }));
                 },
               ),
               FlatButton(
@@ -55,7 +61,9 @@ class MainScreen extends StatelessWidget {
                 child: Text("Projects",style: TextStyle(fontSize: 30.0,fontFamily: "Billabong")),
                 shape: RoundedRectangleBorder(side: BorderSide(color: Colors.transparent)),
                 onPressed: () {
-                  Projects();
+                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+                    return Projects();
+                  }));
                 },
               ),
               FlatButton(
@@ -63,7 +71,9 @@ class MainScreen extends StatelessWidget {
                 child: Text("Resume",style: TextStyle(fontSize: 30.0,fontFamily: "Billabong")),
                 shape: RoundedRectangleBorder(side: BorderSide(color: Colors.transparent)),
                 onPressed: () {
-                  Resume();
+                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+                    return Resume();
+                  }));
                 },
               ),
               FlatButton(
@@ -71,7 +81,9 @@ class MainScreen extends StatelessWidget {
                 child: Text("Contact",style: TextStyle(fontSize: 30.0,fontFamily: "Billabong")),
                 shape: RoundedRectangleBorder(side: BorderSide(color: Colors.transparent)),
                 onPressed: () {
-                  Contact();
+                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+                    return Contact();
+                  }));
                 },
               ),
             ],
