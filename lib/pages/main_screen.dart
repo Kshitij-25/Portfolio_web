@@ -1,11 +1,12 @@
+import 'dart:html' as html;
+
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio_web/pages/about.dart';
 import 'package:portfolio_web/pages/contact.dart';
 import 'package:portfolio_web/pages/education.dart';
 import 'package:portfolio_web/pages/projects.dart';
-import 'package:portfolio_web/pages/resume.dart';
 import 'package:portfolio_web/pages/skills.dart';
-
 
 class MainScreen extends StatelessWidget {
   @override
@@ -22,66 +23,84 @@ class MainScreen extends StatelessWidget {
             ),
           ),
           AppBar(
-            title: Text("Kshitij",style: TextStyle(fontSize: 45.0,fontFamily: "Billabong")),
+            title: Text("Kshitij",
+                style: TextStyle(fontSize: 45.0, fontFamily: "Billabong")),
             backgroundColor: Colors.black54,
             elevation: 0.0,
             actions: <Widget>[
               FlatButton(
                 textColor: Colors.white,
-                child: Text("About Me",style: TextStyle(fontSize: 30.0,fontFamily: "Billabong")),
-                shape: RoundedRectangleBorder(side: BorderSide(color: Colors.transparent)), 
+                child: Text("About Me",
+                    style: TextStyle(fontSize: 30.0, fontFamily: "Billabong")),
+                shape: RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.transparent)),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+                  Navigator.of(context).push(
+                      MaterialPageRoute<Null>(builder: (BuildContext context) {
                     return AboutMe();
                   }));
                 },
               ),
               FlatButton(
                 textColor: Colors.white,
-                child: Text("Education",style: TextStyle(fontSize: 30.0,fontFamily: "Billabong")),
-                shape: RoundedRectangleBorder(side: BorderSide(color: Colors.transparent)),
+                child: Text("Education",
+                    style: TextStyle(fontSize: 30.0, fontFamily: "Billabong")),
+                shape: RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.transparent)),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+                  Navigator.of(context).push(
+                      MaterialPageRoute<Null>(builder: (BuildContext context) {
                     return Education();
                   }));
                 },
               ),
               FlatButton(
                 textColor: Colors.white,
-                child: Text("Skills",style: TextStyle(fontSize: 30.0,fontFamily: "Billabong")),
-                shape: RoundedRectangleBorder(side: BorderSide(color: Colors.transparent)),
+                child: Text("Skills",
+                    style: TextStyle(fontSize: 30.0, fontFamily: "Billabong")),
+                shape: RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.transparent)),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+                  Navigator.of(context).push(
+                      MaterialPageRoute<Null>(builder: (BuildContext context) {
                     return Skills();
                   }));
                 },
               ),
               FlatButton(
                 textColor: Colors.white,
-                child: Text("Projects",style: TextStyle(fontSize: 30.0,fontFamily: "Billabong")),
-                shape: RoundedRectangleBorder(side: BorderSide(color: Colors.transparent)),
+                child: Text("Projects",
+                    style: TextStyle(fontSize: 30.0, fontFamily: "Billabong")),
+                shape: RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.transparent)),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+                  Navigator.of(context).push(
+                      MaterialPageRoute<Null>(builder: (BuildContext context) {
                     return Projects();
                   }));
                 },
               ),
               FlatButton(
                 textColor: Colors.white,
-                child: Text("Resume",style: TextStyle(fontSize: 30.0,fontFamily: "Billabong")),
-                shape: RoundedRectangleBorder(side: BorderSide(color: Colors.transparent)),
+                child: Text("Resume",
+                    style: TextStyle(fontSize: 30.0, fontFamily: "Billabong")),
+                shape: RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.transparent)),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-                    return Resume();
-                  }));
+                  html.window.open(
+                      "https://doc-0o-b8-docs.googleusercontent.com/docs/securesc/fmh1homt03rrntdigts2qiubpe563ek7/64uvjh6etq5at0ga9k2bnt9ih2sk1ahg/1571932800000/16335993444946339484/16335993444946339484/1ejqNOTIea8cIGYfJlIUf0Q718ETSB4ve?e=download",
+                      "GDE");
                 },
               ),
               FlatButton(
                 textColor: Colors.white,
-                child: Text("Contact",style: TextStyle(fontSize: 30.0,fontFamily: "Billabong")),
-                shape: RoundedRectangleBorder(side: BorderSide(color: Colors.transparent)),
+                child: Text("Contact",
+                    style: TextStyle(fontSize: 30.0, fontFamily: "Billabong")),
+                shape: RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.transparent)),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+                  Navigator.of(context).push(
+                      MaterialPageRoute<Null>(builder: (BuildContext context) {
                     return Contact();
                   }));
                 },
@@ -91,7 +110,7 @@ class MainScreen extends StatelessWidget {
           Center(
             child: RichText(
               text: TextSpan(
-                text: "Hi there! My name is\n       Kshitij Passi",
+                text: " Hi there! My name is\n       Kshitij Passi",
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 100.0,
@@ -99,6 +118,35 @@ class MainScreen extends StatelessWidget {
               ),
             ),
           ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Theme(
+              data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
+              child: Container(
+                  width: 150.0,
+                  child: Row(
+                    children: <Widget>[
+                      IconButton(
+                        color: Colors.white,
+                        icon: new Icon(FontAwesomeIcons.github),
+                        onPressed: () {
+                          html.window
+                              .open("https://github.com/Kshitij-25", "Github");
+                        },
+                      ),
+                      IconButton(
+                        color: Colors.white,
+                        icon: new Icon(FontAwesomeIcons.linkedin),
+                        onPressed: () {
+                          html.window.open(
+                              "https://www.linkedin.com/in/kshitij-passi-426b62194/",
+                              "LinkedIn");
+                        },
+                      )
+                    ],
+                  )),
+            ),
+          )
         ],
       ),
     );
