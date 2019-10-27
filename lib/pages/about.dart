@@ -16,7 +16,7 @@ class AboutMe extends StatelessWidget {
           new Container(
             decoration: new BoxDecoration(
               image: new DecorationImage(
-                image: new AssetImage("assets/images/hi.jpg"),
+                image: new AssetImage("assets/images/about.jpg"),
                 fit: BoxFit.cover,
               ),
             ),

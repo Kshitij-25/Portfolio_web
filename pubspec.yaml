@@ -50,6 +50,7 @@ flutter:
      - assets/images/pusa.jpg
      - assets/images/cbse.png
      - assets/images/aktu.png
+     - assets/images/about.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

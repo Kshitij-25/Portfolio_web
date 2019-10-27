@@ -166,14 +166,25 @@ class Education extends StatelessWidget {
                           width: double.infinity,
                           height: 200.0,
                           color: Colors.white,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              image: new DecorationImage(
-                                image: AssetImage("assets/images/cbse.png"),
-                                fit: BoxFit.fitHeight,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: <Widget>[
+                              Container(
+                                width: 220.0,
+                                decoration: BoxDecoration(
+                                  image: new DecorationImage(
+                                    image: AssetImage("assets/images/aktu.png"),
+                                    fit: BoxFit.fitHeight,
+                                  ),
+                                ),
                               ),
-                            ),
-                            child: Text("10th"),
+                              Center(
+                                  child: Text(
+                                "JSS Academy of Technical Education\nBachelor of Technology(Computer Science & Engineering)",
+                                style: TextStyle(fontSize: 30.0),
+                              ))
+                            ],
                           ),
                         ),
                       ),
@@ -228,14 +239,25 @@ class Education extends StatelessWidget {
                           width: double.infinity,
                           height: 200.0,
                           color: Colors.white,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              image: new DecorationImage(
-                                image: AssetImage("assets/images/pusa.jpg"),
-                                fit: BoxFit.fitHeight,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: <Widget>[
+                              Container(
+                                width: 220,
+                                decoration: BoxDecoration(
+                                  image: new DecorationImage(
+                                    image: AssetImage("assets/images/pusa.jpg"),
+                                    fit: BoxFit.scaleDown,
+                                  ),
+                                ),
                               ),
-                            ),
-                            child: Text("Diploma"),
+                              Center(
+                                  child: Text(
+                                "PUSA INSTITUTE OF TECHNOLOGY\nDiploma in ELECTRONICS AND COMMUNICATION",
+                                style: TextStyle(fontSize: 30.0),
+                              )),
+                            ],
                           ),
                         ),
                       ),
@@ -290,14 +312,27 @@ class Education extends StatelessWidget {
                           width: double.infinity,
                           height: 200.0,
                           color: Colors.white,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              image: new DecorationImage(
-                                image: AssetImage("assets/images/aktu.png"),
-                                fit: BoxFit.fitHeight,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: <Widget>[
+                              Container(
+                                width: 190.0,
+                                decoration: BoxDecoration(
+                                  image: new DecorationImage(
+                                    image: AssetImage("assets/images/cbse.png"),
+                                    fit: BoxFit.fitHeight,
+                                  ),
+                                ),
                               ),
-                            ),
-                            child: Text("Btech"),
+                              Center(
+                                  child: Text(
+                                "ST. THOMAS SCHOOL,INDIRAPURAM",
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                ),
+                              ))
+                            ],
                           ),
                         ),
                       ),
