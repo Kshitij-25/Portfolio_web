@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_web/pages/contact.dart';
-
 
 import 'pages/main_screen.dart';
 
@@ -13,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.black),
-      home: Contact(),
+      home: MainScreen(),
     );
   }
 }

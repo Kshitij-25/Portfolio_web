@@ -112,6 +112,10 @@ class Contact extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
+                    Text(
+                      "Let's Connect",
+                      style: TextStyle(fontSize: 60, fontFamily: "Billabong"),
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -119,11 +123,11 @@ class Contact extends StatelessWidget {
                         IconButton(
                           color: Colors.black,
                           iconSize: 100,
-                          icon: new Icon(FontAwesomeIcons.facebook),
+                          icon: new Icon(FontAwesomeIcons.linkedin),
                           onPressed: () {
                             html.window.open(
-                                "https://www.facebook.com/kshitijpassi",
-                                "Facebook");
+                                "https://www.linkedin.com/in/kshitij-passi-426b62194/",
+                                "LinkedIn");
                           },
                         ),
                         IconButton(
@@ -140,12 +144,16 @@ class Contact extends StatelessWidget {
                     IconButton(
                       color: Colors.black,
                       iconSize: 100,
-                      icon: new Icon(FontAwesomeIcons.linkedin),
+                      icon: new Icon(FontAwesomeIcons.facebook),
                       onPressed: () {
                         html.window.open(
-                            "https://www.linkedin.com/in/kshitij-passi-426b62194/",
-                            "LinkedIn");
+                            "https://www.facebook.com/kshitijpassi",
+                            "Facebook");
                       },
+                    ),
+                    Text(
+                      "[Click over any icon to connect on the respective platform]",
+                      style: TextStyle(fontSize: 30, fontFamily: "Billabong"),
                     ),
                   ],
                 ),
