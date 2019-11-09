@@ -105,6 +105,55 @@ class Contact extends StatelessWidget {
           ),
           Column(
             children: <Widget>[
+              Container(
+                height: 700,
+                width: 850,
+                margin: const EdgeInsets.only(top: 200, left: 70),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        IconButton(
+                          color: Colors.black,
+                          iconSize: 100,
+                          icon: new Icon(FontAwesomeIcons.facebook),
+                          onPressed: () {
+                            html.window.open(
+                                "https://www.facebook.com/kshitijpassi",
+                                "Facebook");
+                          },
+                        ),
+                        IconButton(
+                          color: Colors.black,
+                          iconSize: 100,
+                          icon: new Icon(FontAwesomeIcons.github),
+                          onPressed: () {
+                            html.window.open(
+                                "https://github.com/Kshitij-25", "Github");
+                          },
+                        ),
+                      ],
+                    ),
+                    IconButton(
+                      color: Colors.black,
+                      iconSize: 100,
+                      icon: new Icon(FontAwesomeIcons.linkedin),
+                      onPressed: () {
+                        html.window.open(
+                            "https://www.linkedin.com/in/kshitij-passi-426b62194/",
+                            "LinkedIn");
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Column(
+            children: <Widget>[
               Center(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 40.0),
@@ -121,35 +170,6 @@ class Contact extends StatelessWidget {
               ),
             ],
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Theme(
-              data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
-              child: Container(
-                  width: 150.0,
-                  child: Row(
-                    children: <Widget>[
-                      IconButton(
-                        color: Colors.white,
-                        icon: new Icon(FontAwesomeIcons.github),
-                        onPressed: () {
-                          html.window
-                              .open("https://github.com/Kshitij-25", "Github");
-                        },
-                      ),
-                      IconButton(
-                        color: Colors.white,
-                        icon: new Icon(FontAwesomeIcons.linkedin),
-                        onPressed: () {
-                          html.window.open(
-                              "https://www.linkedin.com/in/kshitij-passi-426b62194/",
-                              "LinkedIn");
-                        },
-                      )
-                    ],
-                  )),
-            ),
-          )
         ],
       ),
     );
