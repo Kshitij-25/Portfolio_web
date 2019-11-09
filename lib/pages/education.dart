@@ -34,7 +34,7 @@ class Education extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     side: BorderSide(color: Colors.transparent)),
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.popAndPushNamed(context, "MainScreen()");
                 },
               ),
               FlatButton(

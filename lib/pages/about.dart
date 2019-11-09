@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio_web/pages/contact.dart';
 import 'package:portfolio_web/pages/education.dart';
+import 'package:portfolio_web/pages/main_screen.dart';
 import 'package:portfolio_web/pages/projects.dart';
 import 'package:portfolio_web/pages/skills.dart';
 
@@ -34,7 +35,7 @@ class AboutMe extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     side: BorderSide(color: Colors.transparent)),
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.popAndPushNamed(context, "MainScreen()");
                 },
               ),
               FlatButton(
@@ -164,7 +165,8 @@ class AboutMe extends StatelessWidget {
                                 "•	I had done a project of an Online Book Store using Html, Css, Servlet, Jsp and Sql Database.",
                                 softWrap: true,
                                 textScaleFactor: 1.5,
-                                style: TextStyle(color: Colors.white70, fontSize: 20),
+                                style: TextStyle(
+                                    color: Colors.white70, fontSize: 20),
                               ),
                             ],
                           ),
