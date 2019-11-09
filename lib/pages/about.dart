@@ -121,6 +121,61 @@ class AboutMe extends StatelessWidget {
               ),
             ],
           ),
+          Container(
+            height: 650,
+            width: 1100,
+            margin: new EdgeInsets.only(top: 200, left: 750),
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
+                children: <Widget>[
+                  Container(
+                    height: 400,
+                    width: 400,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/pk.jpg"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Container(
+                          height: 500,
+                          width: 660,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text(
+                                "•	Worked as an ECE Intern in NORTHERN RAILWAYS at Shakurbasti Train Set Depot.\n"
+                                "\n"
+                                "•	I had done a project of Auction using Java Swing and Sql Database.\n"
+                                "\n"
+                                "•	I had done a project of an Online Book Store using Html, Css, Servlet, Jsp and Sql Database.",
+                                softWrap: true,
+                                textScaleFactor: 1.5,
+                                style: TextStyle(color: Colors.white70, fontSize: 20),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Theme(
