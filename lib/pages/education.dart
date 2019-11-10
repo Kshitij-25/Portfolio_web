@@ -126,7 +126,7 @@ class Education extends StatelessWidget {
             child: Theme(
               data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
               child: Container(
-                width: 150.0,
+                width: 100.0,
                 child: Row(
                   children: <Widget>[
                     IconButton(
