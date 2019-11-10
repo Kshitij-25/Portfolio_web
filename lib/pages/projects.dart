@@ -107,7 +107,8 @@ class Projects extends StatelessWidget {
             padding: const EdgeInsets.only(top: 50),
             child: SingleChildScrollView(
               child: Container(
-                margin: const EdgeInsets.only(bottom: 50, left: 300, right: 300),
+                margin:
+                    const EdgeInsets.only(bottom: 50, left: 300, right: 300),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
@@ -148,74 +149,104 @@ class Projects extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         Container(
-                          color: Colors.white,
                           width: 400,
                           height: 600,
+                          decoration: new BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: new BorderRadius.circular(25.0),
+                          ),
                           child: Column(
                             children: <Widget>[
                               Container(
-                                color: Colors.red,
                                 width: MediaQuery.of(context).size.width,
                                 height: 250,
+                                decoration: new BoxDecoration(
+                                  image: new DecorationImage(
+                                      image:
+                                          AssetImage("assets/images/ttt.jpg"),
+                                      fit: BoxFit.cover),
+                                ),
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               Text(
-                                "Project Title",
+                                "Tic Tac Toe",
                                 style: TextStyle(
                                     fontSize: 30, fontWeight: FontWeight.bold),
                               ),
                               SizedBox(
                                 height: 10,
                               ),
-                              Text(
-                                "Project Description",
-                              ),
-                              InkWell(
-                                onTap: () {},
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  " Project links",
-                                  style: TextStyle(
-                                    color: Colors.blue,
-                                  ),
+                                  "Tic-tac-toe (also known as noughts and crosses or Xs and Os) is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.",
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 230),
+                                child: FlatButton.icon(
+                                  icon: new Icon(FontAwesomeIcons.github),
+                                  label: Text("Project Github link"),
+                                  onPressed: () {
+                                    html.window.open(
+                                        "https://github.com/Kshitij-25/TicTacToe",
+                                        "Github");
+                                  },
                                 ),
                               ),
                             ],
                           ),
                         ),
                         Container(
-                          color: Colors.white,
+                          decoration: new BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: new BorderRadius.circular(25.0),
+                          ),
                           width: 400,
                           height: 600,
                           child: Column(
                             children: <Widget>[
                               Container(
-                                color: Colors.red,
                                 width: MediaQuery.of(context).size.width,
                                 height: 250,
+                                decoration: new BoxDecoration(
+                                  image: new DecorationImage(
+                                      image: AssetImage(
+                                          "assets/images/stadia.jpg"),
+                                      fit: BoxFit.cover),
+                                ),
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               Text(
-                                "Project Title",
+                                "Stadia Clone",
                                 style: TextStyle(
                                     fontSize: 30, fontWeight: FontWeight.bold),
                               ),
                               SizedBox(
                                 height: 10,
                               ),
-                              Text(
-                                "Project Description",
-                              ),
-                              InkWell(
-                                onTap: () {},
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  " Project links",
-                                  style: TextStyle(
-                                    color: Colors.blue,
-                                  ),
+                                  "Stadia is a cloud gaming service. The games you play run on Google's cloud servers, but you still see the game on your local screen and play with a gamepad (or keyboard and mouse). It's a lot like a YouTube video, except it's interactive. This means you can play games on a wider range of devices.",
+                                  style: TextStyle(fontSize: 20.0),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 230),
+                                child: FlatButton.icon(
+                                  icon: new Icon(FontAwesomeIcons.github),
+                                  label: Text("Project Github link"),
+                                  onPressed: () {
+                                    html.window.open(
+                                        "https://github.com/Kshitij-25/Stadia-clone",
+                                        "Github");
+                                  },
                                 ),
                               ),
                             ],
@@ -223,88 +254,100 @@ class Projects extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 100,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        Container(
-                          color: Colors.white,
-                          width: 400,
-                          height: 600,
-                          child: Column(
-                            children: <Widget>[
-                              Container(
-                                color: Colors.red,
-                                width: MediaQuery.of(context).size.width,
-                                height: 250,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                "Project Title",
-                                style: TextStyle(
-                                    fontSize: 30, fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                "Project Description",
-                              ),
-                              InkWell(
-                                onTap: () {},
-                                child: Text(
-                                  " Project links",
-                                  style: TextStyle(
-                                    color: Colors.blue,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          color: Colors.white,
-                          width: 400,
-                          height: 600,
-                          child: Column(
-                            children: <Widget>[
-                              Container(
-                                color: Colors.red,
-                                width: MediaQuery.of(context).size.width,
-                                height: 250,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                "Project Title",
-                                style: TextStyle(
-                                    fontSize: 30, fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                "Project Description",
-                              ),
-                              InkWell(
-                                onTap: () {},
-                                child: Text(
-                                  " Project links",
-                                  style: TextStyle(
-                                    color: Colors.blue,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                    // SizedBox(
+                    //   height: 100,
+                    // ),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    //   children: <Widget>[
+                    //     Container(
+                    //       decoration: new BoxDecoration(
+                    //         color: Colors.white,
+                    //         borderRadius: new BorderRadius.circular(25.0),
+                    //       ),
+                    //       width: 400,
+                    //       height: 600,
+                    //       child: Column(
+                    //         children: <Widget>[
+                    //           Container(
+                    //             color: Colors.red,
+                    //             width: MediaQuery.of(context).size.width,
+                    //             height: 250,
+                    //           ),
+                    //           SizedBox(
+                    //             height: 10,
+                    //           ),
+                    //           Text(
+                    //             "Project Title",
+                    //             style: TextStyle(
+                    //                 fontSize: 30, fontWeight: FontWeight.bold),
+                    //           ),
+                    //           SizedBox(
+                    //             height: 10,
+                    //           ),
+                    //           Text(
+                    //             "Project Description",
+                    //           ),
+                    //           Padding(
+                    //             padding: const EdgeInsets.only(right: 230),
+                    //             child: FlatButton.icon(
+                    //               icon: new Icon(FontAwesomeIcons.github),
+                    //               label: Text("Project Github link"),
+                    //               onPressed: () {
+                    //                 html.window.open(
+                    //                     "https://github.com/Kshitij-25/TicTacToe",
+                    //                     "Github");
+                    //               },
+                    //             ),
+                    //           ),
+                    //         ],
+                    //       ),
+                    //     ),
+                    //     Container(
+                    //       decoration: new BoxDecoration(
+                    //         color: Colors.white,
+                    //         borderRadius: new BorderRadius.circular(25.0),
+                    //       ),
+                    //       width: 400,
+                    //       height: 600,
+                    //       child: Column(
+                    //         children: <Widget>[
+                    //           Container(
+                    //             color: Colors.red,
+                    //             width: MediaQuery.of(context).size.width,
+                    //             height: 250,
+                    //           ),
+                    //           SizedBox(
+                    //             height: 10,
+                    //           ),
+                    //           Text(
+                    //             "Project Title",
+                    //             style: TextStyle(
+                    //                 fontSize: 30, fontWeight: FontWeight.bold),
+                    //           ),
+                    //           SizedBox(
+                    //             height: 10,
+                    //           ),
+                    //           Text(
+                    //             "Project Description",
+                    //           ),
+                    //           Padding(
+                    //             padding: const EdgeInsets.only(right: 230),
+                    //             child: FlatButton.icon(
+                    //               icon: new Icon(FontAwesomeIcons.github),
+                    //               label: Text("Project Github link"),
+                    //               onPressed: () {
+                    //                 html.window.open(
+                    //                     "https://github.com/Kshitij-25/TicTacToe",
+                    //                     "Github");
+                    //               },
+                    //             ),
+                    //           ),
+                    //         ],
+                    //       ),
+                    //     ),
+                    //   ],
+                    // ),
                   ],
                 ),
               ),
