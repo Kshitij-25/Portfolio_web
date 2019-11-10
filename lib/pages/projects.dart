@@ -121,6 +121,193 @@ class Projects extends StatelessWidget {
               ),
             ],
           ),
+          SingleChildScrollView(
+            child: Container(
+              margin:
+                  const EdgeInsets.symmetric(vertical: 200, horizontal: 300),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Text(
+                    "A list of awesome currently ongoing & completed projects undertaken by me.",
+                    style: TextStyle(fontSize: 30.0, color: Colors.white),
+                  ),
+                  Text(
+                    "The projects listed below are for the testing purpose of this webpage, as I am in the process of moving",
+                    style: TextStyle(fontSize: 30.0, color: Colors.white),
+                  ),
+                  Text(
+                    "all my projects here very soon. Stay Tuned !",
+                    style: TextStyle(fontSize: 30.0, color: Colors.white),
+                  ),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Container(
+                        color: Colors.white,
+                        width: 400,
+                        height: 600,
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                              color: Colors.red,
+                              width: MediaQuery.of(context).size.width,
+                              height: 250,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Project Title",
+                              style: TextStyle(
+                                  fontSize: 30, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Project Description",
+                            ),
+                            InkWell(
+                              onTap: () {},
+                              child: Text(
+                                " Project links",
+                                style: TextStyle(
+                                  color: Colors.blue,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        color: Colors.white,
+                        width: 400,
+                        height: 600,
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                              color: Colors.red,
+                              width: MediaQuery.of(context).size.width,
+                              height: 250,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Project Title",
+                              style: TextStyle(
+                                  fontSize: 30, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Project Description",
+                            ),
+                            InkWell(
+                              onTap: () {},
+                              child: Text(
+                                " Project links",
+                                style: TextStyle(
+                                  color: Colors.blue,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 100,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Container(
+                        color: Colors.white,
+                        width: 400,
+                        height: 600,
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                              color: Colors.red,
+                              width: MediaQuery.of(context).size.width,
+                              height: 250,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Project Title",
+                              style: TextStyle(
+                                  fontSize: 30, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Project Description",
+                            ),
+                            InkWell(
+                              onTap: () {},
+                              child: Text(
+                                " Project links",
+                                style: TextStyle(
+                                  color: Colors.blue,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        color: Colors.white,
+                        width: 400,
+                        height: 600,
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                              color: Colors.red,
+                              width: MediaQuery.of(context).size.width,
+                              height: 250,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Project Title",
+                              style: TextStyle(
+                                  fontSize: 30, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Project Description",
+                            ),
+                            InkWell(
+                              onTap: () {},
+                              child: Text(
+                                " Project links",
+                                style: TextStyle(
+                                  color: Colors.blue,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Theme(
