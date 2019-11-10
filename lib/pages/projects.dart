@@ -103,32 +103,32 @@ class Projects extends StatelessWidget {
               ),
             ],
           ),
-          Column(
-            children: <Widget>[
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 40.0),
-                  child: RichText(
-                    text: TextSpan(
-                      text: "Projects",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 100.0,
-                          fontFamily: "Billabong"),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
           Padding(
             padding: const EdgeInsets.only(top: 50),
             child: SingleChildScrollView(
               child: Container(
-                margin: const EdgeInsets.only(top: 200, left: 300, right: 300),
+                margin: const EdgeInsets.only(bottom: 50, left: 300, right: 300),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
+                    Column(
+                      children: <Widget>[
+                        Center(
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 40.0),
+                            child: RichText(
+                              text: TextSpan(
+                                text: "Projects",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 100.0,
+                                    fontFamily: "Billabong"),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                     Text(
                       "A list of awesome currently ongoing & completed projects undertaken by me.",
                       style: TextStyle(fontSize: 30.0, color: Colors.white),
