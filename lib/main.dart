@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
-
-import 'pages/main_screen.dart';
+import 'package:responsive_porfolio/pages/main_screen.dart';
+import 'package:responsive_porfolio/pages/projects.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  const MyApp({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: Colors.black),
-      home: MainScreen(),
+      theme: ThemeData(
+        primaryColor: Colors.black,
+      ),
+      routes: <String, WidgetBuilder>{
+        '/MainScreen': (BuildContext context) => new MainScreen(),
+      },
+      home: Projects(),
     );
   }
 }

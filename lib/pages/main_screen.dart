@@ -1,153 +1,112 @@
-import 'dart:html' as html;
-
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:portfolio_web/pages/about.dart';
-import 'package:portfolio_web/pages/contact.dart';
-import 'package:portfolio_web/pages/education.dart';
-import 'package:portfolio_web/pages/projects.dart';
-import 'package:portfolio_web/pages/skills.dart';
+import 'package:responsive_porfolio/Utils/footer.dart';
+import 'package:responsive_porfolio/Utils/nav_button.dart';
+import 'package:responsive_porfolio/Utils/nav_header.dart';
+import 'package:responsive_porfolio/pages/about.dart';
+import 'package:responsive_porfolio/pages/education.dart';
+import 'package:responsive_porfolio/responsive_widget.dart';
 
-class MainScreen extends StatelessWidget {
+class MainScreen extends StatefulWidget {
+  @override
+  _MainScreenState createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  List<Widget> navbutton() => [
+        NavButton(
+          text: "About Me",
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+              return About();
+            }));
+          },
+        ),
+        NavButton(
+          text: "Education",
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+              return Education();
+            }));
+          },
+        ),
+        NavButton(
+          text: "Projects",
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+              return About();
+            }));
+          },
+        ),
+        NavButton(
+          text: "Resume",
+          onPressed: () {},
+        ),
+      ];
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: new Stack(
-        children: <Widget>[
-          new Container(
-            decoration: new BoxDecoration(
-              image: new DecorationImage(
-                image: new AssetImage("assets/images/hi.jpg"),
-                fit: BoxFit.cover,
+    return ResponsiveWidget(
+      largeScreen: Scaffold(
+        drawer: ResponsiveWidget.isSmallScreen(context)
+            ? Drawer(
+                child: Container(
+                  color: Colors.black,
+                  child: ListView(
+                    padding: const EdgeInsets.all(20.0),
+                    children: navbutton(),
+                  ),
+                ),
+              )
+            : null,
+        body: Stack(
+          children: <Widget>[
+            new Container(
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  image: new AssetImage("assets/images/hi.jpg"),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-          ),
-          AppBar(
-            title: Text("Kshitij",
-                style: TextStyle(fontSize: 45.0, fontFamily: "Billabong")),
-            backgroundColor: Colors.black54,
-            elevation: 0.0,
-            actions: <Widget>[
-              FlatButton(
-                textColor: Colors.white,
-                child: Text("About Me",
-                    style: TextStyle(fontSize: 30.0, fontFamily: "Billabong")),
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(color: Colors.transparent)),
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute<Null>(builder: (BuildContext context) {
-                    return AboutMe();
-                  }));
-                },
-              ),
-              FlatButton(
-                textColor: Colors.white,
-                child: Text("Education",
-                    style: TextStyle(fontSize: 30.0, fontFamily: "Billabong")),
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(color: Colors.transparent)),
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute<Null>(builder: (BuildContext context) {
-                    return Education();
-                  }));
-                },
-              ),
-              FlatButton(
-                textColor: Colors.white,
-                child: Text("Skills",
-                    style: TextStyle(fontSize: 30.0, fontFamily: "Billabong")),
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(color: Colors.transparent)),
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute<Null>(builder: (BuildContext context) {
-                    return Skills();
-                  }));
-                },
-              ),
-              FlatButton(
-                textColor: Colors.white,
-                child: Text("Projects",
-                    style: TextStyle(fontSize: 30.0, fontFamily: "Billabong")),
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(color: Colors.transparent)),
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute<Null>(builder: (BuildContext context) {
-                    return Projects();
-                  }));
-                },
-              ),
-              FlatButton(
-                textColor: Colors.white,
-                child: Text("Resume",
-                    style: TextStyle(fontSize: 30.0, fontFamily: "Billabong")),
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(color: Colors.transparent)),
-                onPressed: () {
-                  html.window.open(
-                      "https://doc-0o-b8-docs.googleusercontent.com/docs/securesc/fmh1homt03rrntdigts2qiubpe563ek7/hqghl6pglr81c82oadq3j4b3et1tnbo9/1573380000000/16335993444946339484/16335993444946339484/1ejqNOTIea8cIGYfJlIUf0Q718ETSB4ve?e=download&authuser=0&nonce=ih652aiua194e&user=16335993444946339484&hash=89snndk4eq878javidaoeb93e6r2k3t7",
-                      "GDE");
-                },
-              ),
-              FlatButton(
-                textColor: Colors.white,
-                child: Text("Contact",
-                    style: TextStyle(fontSize: 30.0, fontFamily: "Billabong")),
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(color: Colors.transparent)),
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute<Null>(builder: (BuildContext context) {
-                    return Contact();
-                  }));
-                },
-              ),
-            ],
-          ),
-          Center(
-            child: RichText(
-              text: TextSpan(
-                text: " Hi there! My name is\n       Kshitij Passi",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 100.0,
-                    fontFamily: "Billabong"),
-              ),
+            AppBar(
+              title: Text("Kshitij"),
+              backgroundColor: Colors.black54,
             ),
-          ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Theme(
-              data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
+            Center(
               child: Container(
-                  width: 100.0,
-                  child: Row(
-                    children: <Widget>[
-                      IconButton(
-                        color: Colors.white,
-                        icon: new Icon(FontAwesomeIcons.github),
-                        onPressed: () {
-                          html.window
-                              .open("https://github.com/Kshitij-25", "Github");
-                        },
-                      ),
-                      IconButton(
-                        color: Colors.white,
-                        icon: new Icon(FontAwesomeIcons.linkedin),
-                        onPressed: () {
-                          html.window.open(
-                              "https://www.linkedin.com/in/kshitij-passi-426b62194/",
-                              "LinkedIn");
-                        },
-                      )
-                    ],
-                  )),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      "Hi there! My Name is",
+                      textScaleFactor: 2.0,
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Text(
+                      "Kshitij Passi",
+                      textScaleFactor: 5.0,
+                      style: TextStyle(color: Colors.white),
+                    )
+                  ],
+                ),
+              ),
             ),
-          )
-        ],
+            SingleChildScrollView(
+              child: ResponsiveWidget(
+                largeScreen: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    NavHeader(navButtons: navbutton()),
+                  ],
+                ),
+              ),
+            ),
+            Footer(),
+          ],
+        ),
       ),
     );
   }
