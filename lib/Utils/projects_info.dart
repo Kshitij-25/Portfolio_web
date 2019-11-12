@@ -12,74 +12,72 @@ class _ProjectInfoState extends State<ProjectInfo> {
   projectCards(String title, String description, String projecturl,
           String imageurl) =>
       Center(
-        child: SingleChildScrollView(
-          child: new Container(
-            height: ResponsiveWidget.isSmallScreen(context)
-                ? MediaQuery.of(context).size.height * 0.90
-                : MediaQuery.of(context).size.width * 0.90,
-            width: ResponsiveWidget.isSmallScreen(context)
-                ? MediaQuery.of(context).size.height * 0.50
-                : MediaQuery.of(context).size.width * 0.50,
-            // color: Colors.white,
-            child: Column(
-              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Container(
-                      width: 400,
-                      height: 600,
-                      decoration: new BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: new BorderRadius.circular(25.0),
-                      ),
-                      child: Column(
-                        children: <Widget>[
-                          Container(
-                            width: MediaQuery.of(context).size.width,
-                            height: 250,
-                            decoration: new BoxDecoration(
-                              image: new DecorationImage(
-                                  image: AssetImage(imageurl),
-                                  fit: BoxFit.cover),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 00,
-                          ),
-                          Text(
-                            title,
-                            style: TextStyle(
-                                fontSize: 30, fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              description,
-                              style: TextStyle(fontSize: 20),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 230),
-                            child: FlatButton.icon(
-                              icon: new Icon(FontAwesomeIcons.github),
-                              label: Text("Project Github link"),
-                              onPressed: () {
-                                html.window.open(projecturl, "Github");
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
+        child: new Container(
+          height: ResponsiveWidget.isSmallScreen(context)
+              ? MediaQuery.of(context).size.height * 0.63
+              : MediaQuery.of(context).size.width * 0.63,
+          width: ResponsiveWidget.isSmallScreen(context)
+              ? MediaQuery.of(context).size.height * 0.42
+              : MediaQuery.of(context).size.width * 0.42,
+          // color: Colors.white,
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Container(
+                    width: 400,
+                    height: 600,
+                    decoration: new BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: new BorderRadius.circular(25.0),
                     ),
-                  ],
-                ),
-              ],
-            ),
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          width: MediaQuery.of(context).size.width,
+                          height: 250,
+                          decoration: new BoxDecoration(
+                            image: new DecorationImage(
+                                image: AssetImage(imageurl),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 00,
+                        ),
+                        Text(
+                          title,
+                          style: TextStyle(
+                              fontSize: 30, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            description,
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 230),
+                          child: FlatButton.icon(
+                            icon: new Icon(FontAwesomeIcons.github),
+                            label: Text("Project Github link"),
+                            onPressed: () {
+                              html.window.open(projecturl, "Github");
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       );
