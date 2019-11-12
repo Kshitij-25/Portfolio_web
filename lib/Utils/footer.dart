@@ -10,7 +10,7 @@ class Footer extends StatelessWidget {
       child: Theme(
         data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
         child: Container(
-          width: 300.0,
+          width: 310.0,
           child: Row(
             children: <Widget>[
               Text(

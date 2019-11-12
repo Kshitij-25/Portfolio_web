@@ -63,13 +63,13 @@ class _ProjectsState extends State<Projects> {
             new Container(
               decoration: new BoxDecoration(
                 image: new DecorationImage(
-                  image: new AssetImage("assets/images/code.jpg"),
+                  image: new AssetImage("assets/images/port.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
             AppBar(
-              title: Text("Kshitij"),
+              title: Text("My Portfolio"),
               backgroundColor: Colors.black54,
             ),
             SingleChildScrollView(

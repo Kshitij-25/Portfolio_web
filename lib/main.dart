@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.black,
+        fontFamily: "Evolve"
       ),
       routes: <String, WidgetBuilder>{
         '/MainScreen': (BuildContext context) => new MainScreen(),

@@ -31,7 +31,7 @@ class _EducationState extends State<Education> {
         ),
         NavButton(
           text: "Projects",
-         onPressed: () {
+          onPressed: () {
             Navigator.of(context)
                 .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
               return Projects();
@@ -63,13 +63,13 @@ class _EducationState extends State<Education> {
             new Container(
               decoration: new BoxDecoration(
                 image: new DecorationImage(
-                  image: new AssetImage("assets/images/school.jpg"),
+                  image: new AssetImage("assets/images/port.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
             AppBar(
-              title: Text("Kshitij"),
+              title: Text("My Portfolio"),
               backgroundColor: Colors.black54,
             ),
             SingleChildScrollView(

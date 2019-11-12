@@ -67,13 +67,13 @@ class _MainScreenState extends State<MainScreen> {
             new Container(
               decoration: new BoxDecoration(
                 image: new DecorationImage(
-                  image: new AssetImage("assets/images/hi.jpg"),
+                  image: new AssetImage("assets/images/port.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
             AppBar(
-              title: Text("Kshitij"),
+              title: Text("My Portfolio"),
               backgroundColor: Colors.black54,
             ),
             Center(
@@ -82,14 +82,14 @@ class _MainScreenState extends State<MainScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      "Hi there! My Name is",
+                      "HELLO, I AM",
                       textScaleFactor: 2.0,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.blue),
                     ),
                     Text(
-                      "Kshitij Passi",
+                      "KSHITIJ PASSI",
                       textScaleFactor: 5.0,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black),
                     )
                   ],
                 ),
