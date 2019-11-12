@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_porfolio/Utils/footer.dart';
+import 'package:responsive_porfolio/Utils/main_info.dart';
 import 'package:responsive_porfolio/Utils/nav_button.dart';
 import 'package:responsive_porfolio/Utils/nav_header.dart';
 import 'package:responsive_porfolio/pages/about.dart';
@@ -76,25 +77,7 @@ class _MainScreenState extends State<MainScreen> {
               title: Text("My Portfolio"),
               backgroundColor: Colors.black54,
             ),
-            Center(
-              child: Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      "HELLO, I AM",
-                      textScaleFactor: 2.0,
-                      style: TextStyle(color: Colors.blue),
-                    ),
-                    Text(
-                      "KSHITIJ PASSI",
-                      textScaleFactor: 5.0,
-                      style: TextStyle(color: Colors.black),
-                    )
-                  ],
-                ),
-              ),
-            ),
+            MainInfo(),
             SingleChildScrollView(
               child: ResponsiveWidget(
                 largeScreen: Row(
