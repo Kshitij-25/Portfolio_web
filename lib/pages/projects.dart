@@ -85,7 +85,7 @@ class _ProjectsState extends State<Projects> {
                     Column(
                       children: <Widget>[
                         SizedBox(
-                          height: 90,
+                          height: MediaQuery.of(context).size.height * 0.20,
                         ),
                         ProjectInfo(),
                       ],

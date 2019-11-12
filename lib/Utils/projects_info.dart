@@ -21,10 +21,11 @@ class _ProjectInfoState extends State<ProjectInfo> {
               : MediaQuery.of(context).size.width * 0.42,
           // color: Colors.white,
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            // mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Container(
                     width: 400,

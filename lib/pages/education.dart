@@ -85,7 +85,7 @@ class _EducationState extends State<Education> {
                     Column(
                       children: <Widget>[
                         SizedBox(
-                          height: 90,
+                          height: MediaQuery.of(context).size.height * 0.25,
                         ),
                         EducationInfo(),
                       ],
