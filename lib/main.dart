@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_porfolio/pages/main_screen.dart';
-import 'package:responsive_porfolio/pages/projects.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/MainScreen': (BuildContext context) => new MainScreen(),
       },
-      home: Projects(),
+      home: MainScreen(),
     );
   }
 }

@@ -4,6 +4,7 @@ import 'package:responsive_porfolio/Utils/nav_button.dart';
 import 'package:responsive_porfolio/Utils/nav_header.dart';
 import 'package:responsive_porfolio/pages/about.dart';
 import 'package:responsive_porfolio/pages/education.dart';
+import 'package:responsive_porfolio/pages/projects.dart';
 import 'package:responsive_porfolio/responsive_widget.dart';
 
 class MainScreen extends StatefulWidget {
@@ -36,7 +37,7 @@ class _MainScreenState extends State<MainScreen> {
           onPressed: () {
             Navigator.of(context)
                 .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-              return About();
+              return Projects();
             }));
           },
         ),
