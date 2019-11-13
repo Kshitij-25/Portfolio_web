@@ -25,23 +25,17 @@ class MainInfo extends StatelessWidget {
     crossAxisAlignment: CrossAxisAlignment.start,
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
-      Padding(
-        padding: const EdgeInsets.only(left: 20),
-        child: Text(
-          "HELLO, I AM",
-          textScaleFactor: 2.0,
-          style: TextStyle(color: Colors.blue),
-        ),
+      Text(
+        "HELLO, I AM",
+        textScaleFactor: 2.0,
+        style: TextStyle(color: Colors.blue),
       ),
-      Padding(
-        padding: const EdgeInsets.only(left: 20),
-        child: Text(
-          "KSHITIJ PASSI",
-          textScaleFactor: 5.0,
-          style: TextStyle(
-            color: Colors.black,
-            backgroundColor: Colors.white,
-          ),
+      Text(
+        "KSHITIJ PASSI",
+        textScaleFactor: 4.0,
+        style: TextStyle(
+          color: Colors.black,
+          backgroundColor: Colors.white,
         ),
       ),
       SizedBox(
@@ -56,11 +50,15 @@ class MainInfo extends StatelessWidget {
       largeScreen: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[profileImage(context), profileData],
+        children: <Widget>[profileImage(context), Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: profileData,
+        )],
       ),
       smallScreen: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[profileImage(context), profileData],
       ),
     );

@@ -73,6 +73,7 @@ class _ContactInfoState extends State<ContactInfo> {
       smallScreen: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           projectCards(),
           SizedBox(

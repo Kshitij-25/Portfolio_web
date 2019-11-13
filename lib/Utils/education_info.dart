@@ -25,33 +25,24 @@ class EducationInfo extends StatelessWidget {
     crossAxisAlignment: CrossAxisAlignment.start,
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
-      Padding(
-        padding: const EdgeInsets.only(left: 20),
-        child: Text(
-          "B.TECH IN COMPUTER SCIENCE ENGG.",
-          textScaleFactor: 2.0,
-          style: TextStyle(color: Colors.blue),
+      Text(
+        "B.TECH IN CSE",
+        textScaleFactor: 2.0,
+        style: TextStyle(color: Colors.blue),
+      ),
+      Text(
+        "JSS ACADEMY OF\nTECHNICAL EDUCATION",
+        textScaleFactor: 3.0,
+        style: TextStyle(
+          color: Colors.black,
+          backgroundColor: Colors.white,
         ),
       ),
-      Padding(
-        padding: const EdgeInsets.only(left: 20),
-        child: Text(
-          "JSS ACADEMY OF\nTECHNICAL EDUCATION",
-          textScaleFactor: 4.0,
-          style: TextStyle(
-            color: Colors.black,
-            backgroundColor: Colors.white,
-          ),
-        ),
-      ),
-      Padding(
-        padding: const EdgeInsets.only(left: 20),
-        child: Text(
-          "(2019 - 2022)",
-          textScaleFactor: 1.5,
-          style: TextStyle(
-            color: Colors.grey,
-          ),
+      Text(
+        "(2019 - 2022)",
+        textScaleFactor: 1.5,
+        style: TextStyle(
+          color: Colors.grey,
         ),
       ),
     ],
@@ -63,11 +54,15 @@ class EducationInfo extends StatelessWidget {
       largeScreen: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[profileImage(context), profileData],
+        children: <Widget>[profileImage(context), Padding(
+          padding: const EdgeInsets.only(left: 20.0),
+          child: profileData,
+        )],
       ),
       smallScreen: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[profileImage(context), profileData],
       ),
     );

@@ -54,15 +54,15 @@ class _ProjectInfoState extends State<ProjectInfo> {
                             style: TextStyle(fontSize: 20),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 230),
-                          child: FlatButton(
-                            // icon: new Icon(FontAwesomeIcons.github),
-                            child: Text("Project Github link"),
-                            onPressed: () {
-                              html.window.open(projecturl, "Github");
-                            },
+                        FlatButton(
+                          // icon: new Icon(FontAwesomeIcons.github),
+                          child: Text(
+                            "Project Github link",
+                            style: TextStyle(fontWeight: FontWeight.bold),
                           ),
+                          onPressed: () {
+                            html.window.open(projecturl, "Github");
+                          },
                         ),
                       ],
                     ),
@@ -101,6 +101,7 @@ class _ProjectInfoState extends State<ProjectInfo> {
       smallScreen: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           projectCards(
               "Tic Tac Toe",
