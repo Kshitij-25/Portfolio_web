@@ -15,13 +15,10 @@ class _ProjectInfoState extends State<ProjectInfo> {
         child: new Container(
           height: ResponsiveWidget.isSmallScreen(context) ? 600 : 600,
           width: ResponsiveWidget.isSmallScreen(context) ? 400 : 400,
-          // color: Colors.white,
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                // crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Container(
                     width: 400,
