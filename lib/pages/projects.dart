@@ -85,7 +85,15 @@ class _ProjectsState extends State<Projects> {
                     Column(
                       children: <Widget>[
                         SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.20,
+                          height: MediaQuery.of(context).size.height * 0.13,
+                        ),
+                        Text(
+                          "A list of awesome currently ongoing & completed projects undertaken by me.\nThe projects listed below are for the testing purpose of this webpage, as I am in the process of moving\nall my projects here very soon. Stay Tuned !",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white, fontSize: 25),
+                        ),
+                        SizedBox(
+                          height: 20,
                         ),
                         ProjectInfo(),
                       ],

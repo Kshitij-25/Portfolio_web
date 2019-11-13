@@ -30,7 +30,7 @@ class EducationInfo extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.only(left: 20),
         child: Text(
-          "B.TECH IN CSE",
+          "B.TECH IN COMPUTER SCIENCE ENGG.",
           textScaleFactor: 2.0,
           style: TextStyle(color: Colors.blue),
         ),
@@ -43,6 +43,16 @@ class EducationInfo extends StatelessWidget {
           style: TextStyle(
             color: Colors.black,
             backgroundColor: Colors.white,
+          ),
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(left: 20),
+        child: Text(
+          "(2019 - 2022)",
+          textScaleFactor: 1.5,
+          style: TextStyle(
+            color: Colors.grey,
           ),
         ),
       ),

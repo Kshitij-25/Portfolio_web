@@ -38,7 +38,7 @@ class ProfileInfo extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.only(left: 20),
         child: Text(
-          "DELHI",
+          "NEW DELHI",
           textScaleFactor: 5.0,
           style: TextStyle(
             color: Colors.black,

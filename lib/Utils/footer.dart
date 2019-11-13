@@ -10,7 +10,7 @@ class Footer extends StatelessWidget {
       child: Theme(
         data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
         child: Container(
-          width: 310.0,
+          width: 350.0,
           child: Row(
             children: <Widget>[
               Text(
@@ -47,6 +47,14 @@ class Footer extends StatelessWidget {
                 onPressed: () {
                   html.window
                       .open("https://twitter.com/kshitijpassi", "Twitter");
+                },
+              ),
+              IconButton(
+                color: Colors.white,
+                icon: new Icon(FontAwesomeIcons.instagram),
+                onPressed: () {
+                  html.window
+                      .open("https://www.instagram.com/kshitij.passi/", "Instagram");
                 },
               ),
             ],

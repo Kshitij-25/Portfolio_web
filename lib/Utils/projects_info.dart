@@ -13,19 +13,15 @@ class _ProjectInfoState extends State<ProjectInfo> {
           String imageurl) =>
       Center(
         child: new Container(
-          height: ResponsiveWidget.isSmallScreen(context)
-              ? MediaQuery.of(context).size.height * 0.63
-              : MediaQuery.of(context).size.width * 0.63,
-          width: ResponsiveWidget.isSmallScreen(context)
-              ? MediaQuery.of(context).size.height * 0.42
-              : MediaQuery.of(context).size.width * 0.42,
+          height: ResponsiveWidget.isSmallScreen(context) ? 600 : 600,
+          width: ResponsiveWidget.isSmallScreen(context) ? 400 : 400,
           // color: Colors.white,
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                // crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Container(
                     width: 400,
@@ -41,8 +37,7 @@ class _ProjectInfoState extends State<ProjectInfo> {
                           height: 250,
                           decoration: new BoxDecoration(
                             image: new DecorationImage(
-                                image: AssetImage(imageurl),
-                                fit: BoxFit.cover),
+                                image: AssetImage(imageurl), fit: BoxFit.cover),
                           ),
                         ),
                         SizedBox(
@@ -87,7 +82,7 @@ class _ProjectInfoState extends State<ProjectInfo> {
   Widget build(BuildContext context) {
     return ResponsiveWidget(
       largeScreen: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           projectCards(
@@ -100,6 +95,11 @@ class _ProjectInfoState extends State<ProjectInfo> {
               "Stadia is a cloud gaming service. The games you play run on Google's cloud servers, but you still see the game on your local screen and play with a gamepad (or keyboard and mouse). It's a lot like a YouTube video, except it's interactive. This means you can play games on a wider range of devices.",
               "https://github.com/Kshitij-25/Stadia-clone",
               "assets/images/stadia.jpg"),
+          projectCards(
+              "Instagram Redesign",
+              "Instagram is a free, online photo-sharing application and social network platform. Instagram allows users to edit and upload photos and short videos through a mobile app. Users also have the option of making their profile private so that only their followers can view their posts.",
+              "https://github.com/Kshitij-25/Insta-clone-redesign",
+              "assets/images/insta.jpg"),
         ],
       ),
       smallScreen: Column(
@@ -111,11 +111,25 @@ class _ProjectInfoState extends State<ProjectInfo> {
               "Tic-tac-toe (also known as noughts and crosses or Xs and Os) is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.",
               "https://github.com/Kshitij-25/TicTacToe",
               "assets/images/ttt.jpg"),
+          SizedBox(
+            height: 40,
+          ),
           projectCards(
               "Stadia Clone",
               "Stadia is a cloud gaming service. The games you play run on Google's cloud servers, but you still see the game on your local screen and play with a gamepad (or keyboard and mouse). It's a lot like a YouTube video, except it's interactive. This means you can play games on a wider range of devices.",
               "https://github.com/Kshitij-25/Stadia-clone",
               "assets/images/stadia.jpg"),
+          SizedBox(
+            height: 40,
+          ),
+          projectCards(
+              "Instagram Redesign",
+              "Instagram is a free, online photo-sharing application and social network platform. Instagram allows users to edit and upload photos and short videos through a mobile app. Users also have the option of making their profile private so that only their followers can view their posts.",
+              "https://github.com/Kshitij-25/Insta-clone-redesign",
+              "assets/images/insta.jpg"),
+          SizedBox(
+            height: 40,
+          ),
         ],
       ),
     );
