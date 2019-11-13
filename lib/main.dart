@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 import 'package:responsive_porfolio/pages/main_screen.dart';
 
 void main() => runApp(MyApp());

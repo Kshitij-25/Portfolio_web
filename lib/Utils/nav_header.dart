@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:responsive_porfolio/responsive_widget.dart';
+import 'package:flutter_web/material.dart';
+import '../responsive_widget.dart';
 
 class NavHeader extends StatelessWidget {
   final List<Widget> navButtons;

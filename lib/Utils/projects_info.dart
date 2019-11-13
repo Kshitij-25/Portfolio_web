@@ -1,6 +1,5 @@
 import 'dart:html' as html;
-import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_web/material.dart';
 import 'package:responsive_porfolio/responsive_widget.dart';
 
 class ProjectInfo extends StatefulWidget {
@@ -57,9 +56,9 @@ class _ProjectInfoState extends State<ProjectInfo> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 230),
-                          child: FlatButton.icon(
-                            icon: new Icon(FontAwesomeIcons.github),
-                            label: Text("Project Github link"),
+                          child: FlatButton(
+                            // icon: new Icon(FontAwesomeIcons.github),
+                            child: Text("Project Github link"),
                             onPressed: () {
                               html.window.open(projecturl, "Github");
                             },
@@ -86,17 +85,17 @@ class _ProjectInfoState extends State<ProjectInfo> {
               "Tic Tac Toe",
               "Tic-tac-toe (also known as noughts and crosses or Xs and Os) is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.",
               "https://github.com/Kshitij-25/TicTacToe",
-              "assets/images/ttt.jpg"),
+              "images/ttt.jpg"),
           projectCards(
               "Stadia Clone",
               "Stadia is a cloud gaming service. The games you play run on Google's cloud servers, but you still see the game on your local screen and play with a gamepad (or keyboard and mouse). It's a lot like a YouTube video, except it's interactive. This means you can play games on a wider range of devices.",
               "https://github.com/Kshitij-25/Stadia-clone",
-              "assets/images/stadia.jpg"),
+              "images/stadia.jpg"),
           projectCards(
               "Instagram Redesign",
               "Instagram is a free, online photo-sharing application and social network platform. Instagram allows users to edit and upload photos and short videos through a mobile app. Users also have the option of making their profile private so that only their followers can view their posts.",
               "https://github.com/Kshitij-25/Insta-clone-redesign",
-              "assets/images/insta.jpg"),
+              "images/insta.jpg"),
         ],
       ),
       smallScreen: Column(
@@ -107,7 +106,7 @@ class _ProjectInfoState extends State<ProjectInfo> {
               "Tic Tac Toe",
               "Tic-tac-toe (also known as noughts and crosses or Xs and Os) is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.",
               "https://github.com/Kshitij-25/TicTacToe",
-              "assets/images/ttt.jpg"),
+              "images/ttt.jpg"),
           SizedBox(
             height: 40,
           ),
@@ -115,7 +114,7 @@ class _ProjectInfoState extends State<ProjectInfo> {
               "Stadia Clone",
               "Stadia is a cloud gaming service. The games you play run on Google's cloud servers, but you still see the game on your local screen and play with a gamepad (or keyboard and mouse). It's a lot like a YouTube video, except it's interactive. This means you can play games on a wider range of devices.",
               "https://github.com/Kshitij-25/Stadia-clone",
-              "assets/images/stadia.jpg"),
+              "images/stadia.jpg"),
           SizedBox(
             height: 40,
           ),
@@ -123,7 +122,7 @@ class _ProjectInfoState extends State<ProjectInfo> {
               "Instagram Redesign",
               "Instagram is a free, online photo-sharing application and social network platform. Instagram allows users to edit and upload photos and short videos through a mobile app. Users also have the option of making their profile private so that only their followers can view their posts.",
               "https://github.com/Kshitij-25/Insta-clone-redesign",
-              "assets/images/insta.jpg"),
+              "images/insta.jpg"),
           SizedBox(
             height: 40,
           ),

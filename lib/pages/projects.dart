@@ -1,12 +1,12 @@
 import 'dart:html' as html;
-import 'package:flutter/material.dart';
-import 'package:responsive_porfolio/Utils/footer.dart';
-import 'package:responsive_porfolio/Utils/nav_button.dart';
-import 'package:responsive_porfolio/Utils/nav_header.dart';
-import 'package:responsive_porfolio/Utils/projects_info.dart';
-import 'package:responsive_porfolio/pages/about.dart';
-import 'package:responsive_porfolio/pages/education.dart';
-import 'package:responsive_porfolio/responsive_widget.dart';
+import 'package:flutter_web/material.dart';
+import '../Utils/footer.dart';
+import '../Utils/nav_button.dart';
+import '../Utils/nav_header.dart';
+import '../Utils/projects_info.dart';
+import '../pages/about.dart';
+import '../pages/education.dart';
+import '../responsive_widget.dart';
 
 class Projects extends StatefulWidget {
   @override
@@ -68,7 +68,7 @@ class _ProjectsState extends State<Projects> {
             new Container(
               decoration: new BoxDecoration(
                 image: new DecorationImage(
-                  image: new AssetImage("assets/images/port.jpg"),
+                  image: new AssetImage("images/port.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),

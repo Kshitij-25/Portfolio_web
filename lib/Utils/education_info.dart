@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:responsive_porfolio/responsive_widget.dart';
+import 'package:flutter_web/material.dart';
+import '../responsive_widget.dart';
 
 class EducationInfo extends StatelessWidget {
   profileImage(context) => Center(
@@ -11,11 +11,9 @@ class EducationInfo extends StatelessWidget {
               ? MediaQuery.of(context).size.height * 0.25
               : MediaQuery.of(context).size.width * 0.25,
           decoration: BoxDecoration(
-            backgroundBlendMode: BlendMode.luminosity,
-            color: Colors.deepOrange,
             shape: BoxShape.circle,
             image: DecorationImage(
-              image: AssetImage("assets/images/jss.jpg"),
+              image: AssetImage("images/jss.jpg"),
               alignment: Alignment.center,
               fit: BoxFit.cover,
             ),

@@ -3,27 +3,26 @@ description: A new Flutter project.
 
 
 environment:
+  # You must be using Flutter >=1.5.0 or Dart >=2.3.0
   sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
+  flutter_web: any
+  flutter_web_ui: any
 
-  cupertino_icons: ^0.1.2
-  font_awesome_flutter: any
+
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  build_runner: ^1.6.4
+  build_web_compilers: ^2.1.4
+  pedantic: ^1.0.0
 
-flutter:
-
-  uses-material-design: true
-
-  assets:
-   - assets/images/
-
-  fonts:
-      - family: Evolve
-        fonts:
-          - asset: assets/fonts/Evolve.otf
+dependency_overrides:
+  flutter_web:
+    git:
+      url: https://github.com/flutter/flutter_web
+      path: packages/flutter_web
+  flutter_web_ui:
+    git:
+      url: https://github.com/flutter/flutter_web
+      path: packages/flutter_web_ui    
