@@ -1,3 +1,4 @@
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:responsive_porfolio/Utils/education_info.dart';
 import 'package:responsive_porfolio/Utils/footer.dart';
@@ -40,7 +41,11 @@ class _EducationState extends State<Education> {
         ),
         NavButton(
           text: "Resume",
-          onPressed: () {},
+          onPressed: () {
+            html.window.open(
+                "https://drive.google.com/file/d/1ejqNOTIea8cIGYfJlIUf0Q718ETSB4ve/view",
+                "pdf");
+          },
         ),
       ];
   @override
@@ -72,6 +77,7 @@ class _EducationState extends State<Education> {
               title: Text("My Portfolio"),
               backgroundColor: Colors.black54,
             ),
+            EducationInfo(),
             SingleChildScrollView(
               child: ResponsiveWidget(
                 largeScreen: Stack(
@@ -80,14 +86,6 @@ class _EducationState extends State<Education> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         NavHeader(navButtons: navbutton()),
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.25,
-                        ),
-                        EducationInfo(),
                       ],
                     ),
                   ],

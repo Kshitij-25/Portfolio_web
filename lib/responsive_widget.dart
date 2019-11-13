@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class ResponsiveWidget extends StatelessWidget {
   final Widget largeScreen;
   final Widget mediumScreen;

@@ -1,3 +1,4 @@
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:responsive_porfolio/Utils/footer.dart';
 import 'package:responsive_porfolio/Utils/main_info.dart';
@@ -44,7 +45,11 @@ class _MainScreenState extends State<MainScreen> {
         ),
         NavButton(
           text: "Resume",
-          onPressed: () {},
+          onPressed: () {
+            html.window.open(
+                "https://drive.google.com/file/d/1ejqNOTIea8cIGYfJlIUf0Q718ETSB4ve/view",
+                "pdf");
+          },
         ),
       ];
 

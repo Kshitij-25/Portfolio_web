@@ -1,3 +1,4 @@
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:responsive_porfolio/Utils/footer.dart';
 import 'package:responsive_porfolio/Utils/nav_button.dart';
@@ -40,7 +41,11 @@ class _ProjectsState extends State<Projects> {
         ),
         NavButton(
           text: "Resume",
-          onPressed: () {},
+          onPressed: () {
+            html.window.open(
+                "https://drive.google.com/file/d/1ejqNOTIea8cIGYfJlIUf0Q718ETSB4ve/view",
+                "pdf");
+          },
         ),
       ];
   @override
