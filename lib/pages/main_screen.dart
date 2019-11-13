@@ -1,12 +1,8 @@
 import 'dart:html' as html;
 import 'package:flutter_web/material.dart';
-import '../Utils/contact.dart';
 import '../Utils/main_info.dart';
 import '../Utils/nav_button.dart';
 import '../Utils/nav_header.dart';
-import '../pages/about.dart';
-import '../pages/education.dart';
-import '../pages/projects.dart';
 import '../responsive_widget.dart';
 
 class MainScreen extends StatefulWidget {
@@ -19,28 +15,19 @@ class _MainScreenState extends State<MainScreen> {
         NavButton(
           text: "About Me",
           onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-              return About();
-            }));
+            Navigator.pushNamed(context, "/About");
           },
         ),
         NavButton(
           text: "Education",
           onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-              return Education();
-            }));
+            Navigator.pushNamed(context, "/Education");
           },
         ),
         NavButton(
           text: "Projects",
           onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-              return Projects();
-            }));
+            Navigator.pushNamed(context, "/Projects");
           },
         ),
         NavButton(
@@ -54,10 +41,7 @@ class _MainScreenState extends State<MainScreen> {
         NavButton(
           text: "Contact Me",
           onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-              return Contact();
-            }));
+            Navigator.pushNamed(context, "/Contacts");
           },
         ),
       ];

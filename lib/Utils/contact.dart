@@ -1,11 +1,8 @@
 import 'dart:html' as html;
 import 'package:flutter_web/material.dart';
 import '../Utils/contact_info.dart';
-import '../pages/projects.dart';
 import '../Utils/nav_button.dart';
 import '../Utils/nav_header.dart';
-import '../pages/about.dart';
-import '../pages/education.dart';
 import '../responsive_widget.dart';
 
 class Contact extends StatefulWidget {
@@ -24,28 +21,19 @@ class _ContactState extends State<Contact> {
         NavButton(
           text: "About Me",
           onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-              return About();
-            }));
+            Navigator.pushNamed(context, "/About");
           },
         ),
         NavButton(
           text: "Education",
           onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-              return Education();
-            }));
+            Navigator.pushNamed(context, "/Education");
           },
         ),
         NavButton(
           text: "Projects",
           onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-              return Projects();
-            }));
+            Navigator.pushNamed(context, "/Projects");
           },
         ),
         NavButton(
