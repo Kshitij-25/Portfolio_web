@@ -1,7 +1,7 @@
 import 'dart:html' as html;
 import 'package:flutter_web/material.dart';
+import '../Utils/contact.dart';
 import '../Utils/education_info.dart';
-import '../Utils/footer.dart';
 import '../Utils/nav_button.dart';
 import '../Utils/nav_header.dart';
 import '../pages/about.dart';
@@ -45,6 +45,15 @@ class _EducationState extends State<Education> {
             html.window.open(
                 "https://drive.google.com/file/d/1ejqNOTIea8cIGYfJlIUf0Q718ETSB4ve/view",
                 "pdf");
+          },
+        ),
+        NavButton(
+          text: "Contact Me",
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+              return Contact();
+            }));
           },
         ),
       ];
@@ -92,7 +101,6 @@ class _EducationState extends State<Education> {
                 ),
               ),
             ),
-            Footer(),
           ],
         ),
       ),

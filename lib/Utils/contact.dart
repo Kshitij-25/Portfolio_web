@@ -1,21 +1,26 @@
 import 'dart:html' as html;
 import 'package:flutter_web/material.dart';
-import '../Utils/contact.dart';
-import '../Utils/main_info.dart';
+import '../Utils/contact_info.dart';
+import '../pages/projects.dart';
 import '../Utils/nav_button.dart';
 import '../Utils/nav_header.dart';
 import '../pages/about.dart';
 import '../pages/education.dart';
-import '../pages/projects.dart';
 import '../responsive_widget.dart';
 
-class MainScreen extends StatefulWidget {
+class Contact extends StatefulWidget {
   @override
-  _MainScreenState createState() => _MainScreenState();
+  _ContactState createState() => _ContactState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _ContactState extends State<Contact> {
   List<Widget> navbutton() => [
+        NavButton(
+          text: "Home",
+          onPressed: () {
+            Navigator.popAndPushNamed(context, "/MainScreen");
+          },
+        ),
         NavButton(
           text: "About Me",
           onPressed: () {
@@ -51,17 +56,7 @@ class _MainScreenState extends State<MainScreen> {
                 "pdf");
           },
         ),
-        NavButton(
-          text: "Contact Me",
-          onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-              return Contact();
-            }));
-          },
-        ),
       ];
-
   @override
   Widget build(BuildContext context) {
     return ResponsiveWidget(
@@ -91,13 +86,24 @@ class _MainScreenState extends State<MainScreen> {
               title: Text("My Portfolio"),
               backgroundColor: Colors.black54,
             ),
-            MainInfo(),
             SingleChildScrollView(
               child: ResponsiveWidget(
-                largeScreen: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                largeScreen: Stack(
                   children: <Widget>[
-                    NavHeader(navButtons: navbutton()),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        NavHeader(navButtons: navbutton()),
+                      ],
+                    ),
+                    Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.13,
+                        ),
+                        ContactInfo(),
+                      ],
+                    ),
                   ],
                 ),
               ),
