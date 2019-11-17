@@ -1,0 +1,1 @@
+{"isEntrypoint":true,"deps":["flutter_web|lib/material.dart","responsive_porfolio|lib/Utils/contact.dart","responsive_porfolio|lib/pages/about.dart","responsive_porfolio|lib/pages/education.dart","responsive_porfolio|lib/pages/main_screen.dart","responsive_porfolio|lib/pages/projects.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[],"hasMain":true}
