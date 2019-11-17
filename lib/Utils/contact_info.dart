@@ -1,3 +1,4 @@
+import 'dart:html' as html;
 import 'package:flutter_web/material.dart';
 import 'package:responsive_porfolio/responsive_widget.dart';
 
@@ -24,35 +25,65 @@ class _ContactInfoState extends State<ContactInfo> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(
-                  "- Email : kshitijnishu@gmail.com",
-                  textScaleFactor: 2.0,
-                  style: TextStyle(color: Colors.white),
+                FlatButton.icon(
+                  icon: SizedBox(
+                    width: 50,
+                    height: 20,
+                    child: Image.asset("images/github.png"),
+                  ),
+                  label: Text("Github"),
+                  onPressed: () {
+                    html.window.open("https://github.com/Kshitij-25", "Github");
+                  },
                 ),
-                Text(
-                  "- Github : @kshitij-25",
-                  textScaleFactor: 2.0,
-                  style: TextStyle(color: Colors.white),
+                FlatButton.icon(
+                  icon: SizedBox(
+                    width: 50,
+                    height: 20,
+                    child: Image.asset("images/linkedin.png"),
+                  ),
+                  label: Text("LinkedIn"),
+                  onPressed: () {
+                    html.window.open(
+                        "https://www.linkedin.com/in/kshitij-passi/",
+                        "LinkedIn");
+                  },
                 ),
-                Text(
-                  "- LinkedIn : @kshitij-passi",
-                  textScaleFactor: 2.0,
-                  style: TextStyle(color: Colors.white),
+                FlatButton.icon(
+                  icon: SizedBox(
+                    width: 50,
+                    height: 20,
+                    child: Image.asset("images/facebook.png"),
+                  ),
+                  label: Text("Facebook"),
+                  onPressed: () {
+                    html.window.open(
+                        "https://www.facebook.com/kshitijpassi", "Facebook");
+                  },
                 ),
-                Text(
-                  "- Facebook : @kshitijpassi",
-                  textScaleFactor: 2.0,
-                  style: TextStyle(color: Colors.white),
+                FlatButton.icon(
+                  icon: SizedBox(
+                    width: 50,
+                    height: 20,
+                    child: Image.asset("images/twitter.png"),
+                  ),
+                  label: Text("Twitter"),
+                  onPressed: () {
+                    html.window
+                        .open("https://twitter.com/kshitijpassi", "Twitter");
+                  },
                 ),
-                Text(
-                  "- Twitter : @kshitijpassi",
-                  textScaleFactor: 2.0,
-                  style: TextStyle(color: Colors.white),
-                ),
-                Text(
-                  "- Instagram : @kshitij.passi",
-                  textScaleFactor: 2.0,
-                  style: TextStyle(color: Colors.white),
+                FlatButton.icon(
+                  icon: SizedBox(
+                    width: 50,
+                    height: 20,
+                    child: Image.asset("images/instagram.png"),
+                  ),
+                  label: Text("Instagram"),
+                  onPressed: () {
+                    html.window.open("https://www.instagram.com/kshitij.passi/",
+                        "Instagram");
+                  },
                 ),
               ],
             ),
