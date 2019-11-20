@@ -54,9 +54,13 @@ class _ProjectInfoState extends State<ProjectInfo> {
                             style: TextStyle(fontSize: 20),
                           ),
                         ),
-                        FlatButton(
-                          // icon: new Icon(FontAwesomeIcons.github),
-                          child: Text(
+                        FlatButton.icon(
+                          icon: SizedBox(
+                            width: 20,
+                            height: 20,
+                            child: Image.asset("images/github.png"),
+                          ),
+                          label: Text(
                             "Project Github link",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
