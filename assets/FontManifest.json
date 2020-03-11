@@ -1,18 +1,1 @@
-[
-    {
-      "family": "MaterialIcons",
-      "fonts": [
-        {
-          "asset": "https://fonts.gstatic.com/s/materialicons/v42/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
-        }
-      ]
-    },
-    {
-      "family": "Evolve",
-      "fonts": [
-        {
-          "asset": "fonts/Evolve.otf"
-        }
-      ]
-    }
-]  
+[{"family":"MaterialIcons","fonts":[{"asset":"fonts/MaterialIcons-Regular.ttf"}]},{"family":"Evolve","fonts":[{"asset":"assets/fonts/Evolve.otf"}]},{"family":"packages/cupertino_icons/CupertinoIcons","fonts":[{"asset":"packages/cupertino_icons/assets/CupertinoIcons.ttf"}]}]
