@@ -1,6 +1,6 @@
 import 'dart:html' as html;
-import 'package:flutter_web/material.dart';
-import 'package:responsive_porfolio/responsive_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:portfolio_update/responsive_widget.dart';
 
 class ContactInfo extends StatefulWidget {
   @override
@@ -29,7 +29,7 @@ class _ContactInfoState extends State<ContactInfo> {
                   icon: SizedBox(
                     width: 50,
                     height: 20,
-                    child: Image.asset("images/github.png"),
+                    child: Image.asset("assets/images/github.png"),
                   ),
                   label: Text("Github"),
                   onPressed: () {
@@ -40,7 +40,7 @@ class _ContactInfoState extends State<ContactInfo> {
                   icon: SizedBox(
                     width: 50,
                     height: 20,
-                    child: Image.asset("images/linkedin.png"),
+                    child: Image.asset("assets/images/linkedin.png"),
                   ),
                   label: Text("LinkedIn"),
                   onPressed: () {
@@ -53,7 +53,7 @@ class _ContactInfoState extends State<ContactInfo> {
                   icon: SizedBox(
                     width: 50,
                     height: 20,
-                    child: Image.asset("images/facebook.png"),
+                    child: Image.asset("assets/images/facebook.png"),
                   ),
                   label: Text("Facebook"),
                   onPressed: () {
@@ -65,7 +65,7 @@ class _ContactInfoState extends State<ContactInfo> {
                   icon: SizedBox(
                     width: 50,
                     height: 20,
-                    child: Image.asset("images/twitter.png"),
+                    child: Image.asset("assets/images/twitter.png"),
                   ),
                   label: Text("Twitter"),
                   onPressed: () {
@@ -77,7 +77,7 @@ class _ContactInfoState extends State<ContactInfo> {
                   icon: SizedBox(
                     width: 50,
                     height: 20,
-                    child: Image.asset("images/instagram.png"),
+                    child: Image.asset("assets/images/instagram.png"),
                   ),
                   label: Text("Instagram"),
                   onPressed: () {

@@ -1,11 +1,16 @@
 import 'dart:html' as html;
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
+import 'package:portfolio_update/Utils/contact.dart';
+import 'package:portfolio_update/screens/about.dart';
+import 'package:portfolio_update/screens/education.dart';
+import 'package:portfolio_update/screens/main_screen.dart';
 import '../Utils/nav_button.dart';
 import '../Utils/nav_header.dart';
 import '../Utils/projects_info.dart';
 import '../responsive_widget.dart';
 
 class Projects extends StatefulWidget {
+  static const routeName = '/Projects';
   @override
   _ProjectsState createState() => _ProjectsState();
 }
@@ -15,19 +20,19 @@ class _ProjectsState extends State<Projects> {
         NavButton(
           text: "Home",
           onPressed: () {
-            Navigator.popAndPushNamed(context, "/MainScreen");
+            Navigator.of(context).popAndPushNamed(MainScreen.routeName);
           },
         ),
         NavButton(
           text: "About Me",
           onPressed: () {
-            Navigator.pushNamed(context, "/About");
+            Navigator.of(context).pushNamed(About.routeName);
           },
         ),
         NavButton(
           text: "Education",
           onPressed: () {
-            Navigator.pushNamed(context, "/Education");
+            Navigator.of(context).pushNamed(Education.routeName);
           },
         ),
         NavButton(
@@ -41,7 +46,7 @@ class _ProjectsState extends State<Projects> {
         NavButton(
           text: "Contact Me",
           onPressed: () {
-            Navigator.pushNamed(context, "/Contacts");
+            Navigator.of(context).pushNamed(Contact.routeName);
           },
         ),
       ];
@@ -65,7 +70,7 @@ class _ProjectsState extends State<Projects> {
             new Container(
               decoration: new BoxDecoration(
                 image: new DecorationImage(
-                  image: new AssetImage("images/port.jpg"),
+                  image: new AssetImage("assets/images/port.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),

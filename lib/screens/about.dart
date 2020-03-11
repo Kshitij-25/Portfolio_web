@@ -1,11 +1,16 @@
 import 'dart:html' as html;
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
+import 'package:portfolio_update/Utils/contact.dart';
+import 'package:portfolio_update/screens/education.dart';
+import 'package:portfolio_update/screens/main_screen.dart';
+import 'package:portfolio_update/screens/projects.dart';
 import '../Utils/nav_button.dart';
 import '../Utils/nav_header.dart';
 import '../Utils/profile_info.dart';
 import '../responsive_widget.dart';
 
 class About extends StatefulWidget {
+  static const routeName = '/About';
   @override
   _AboutState createState() => _AboutState();
 }
@@ -15,19 +20,19 @@ class _AboutState extends State<About> {
         NavButton(
           text: "Home",
           onPressed: () {
-            Navigator.popAndPushNamed(context, "/MainScreen");
+            Navigator.of(context).popAndPushNamed(MainScreen.routeName);
           },
         ),
         NavButton(
           text: "Education",
           onPressed: () {
-            Navigator.pushNamed(context, "/Education");
+            Navigator.of(context).pushNamed(Education.routeName);
           },
         ),
         NavButton(
           text: "Projects",
           onPressed: () {
-            Navigator.pushNamed(context, "/Projects");
+            Navigator.of(context).pushNamed(Projects.routeName);
           },
         ),
         NavButton(
@@ -41,7 +46,7 @@ class _AboutState extends State<About> {
         NavButton(
           text: "Contact Me",
           onPressed: () {
-            Navigator.pushNamed(context, "/Contacts");
+            Navigator.of(context).pushNamed(Contact.routeName);
           },
         ),
       ];
@@ -65,7 +70,7 @@ class _AboutState extends State<About> {
             new Container(
               decoration: new BoxDecoration(
                 image: new DecorationImage(
-                  image: new AssetImage("images/port.jpg"),
+                  image: new AssetImage("assets/images/port.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),

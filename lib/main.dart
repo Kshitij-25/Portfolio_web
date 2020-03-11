@@ -1,9 +1,9 @@
-import 'package:flutter_web/material.dart';
-import 'package:responsive_porfolio/Utils/contact.dart';
-import 'package:responsive_porfolio/pages/about.dart';
-import 'package:responsive_porfolio/pages/education.dart';
-import 'package:responsive_porfolio/pages/main_screen.dart';
-import 'package:responsive_porfolio/pages/projects.dart';
+import 'package:flutter/material.dart';
+import 'package:portfolio_update/Utils/contact.dart';
+import 'package:portfolio_update/screens/about.dart';
+import 'package:portfolio_update/screens/education.dart';
+import 'package:portfolio_update/screens/main_screen.dart';
+import 'package:portfolio_update/screens/projects.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,11 +15,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.black, fontFamily: "Evolve"),
       routes: <String, WidgetBuilder>{
-        '/MainScreen': (BuildContext context) => new MainScreen(),
-        '/About': (BuildContext context) => new About(),
-        '/Education': (BuildContext context) => new Education(),
-        '/Projects': (BuildContext context) => new Projects(),
-        '/Contacts': (BuildContext context) => new Contact(),
+        About.routeName: (ctx) => About(),
+        Education.routeName: (ctx) => Education(),
+        Projects.routeName: (ctx) => Projects(),
+        Contact.routeName: (ctx) => Contact(),
+        MainScreen.routeName: (ctx) => MainScreen()
       },
       home: MainScreen(),
     );

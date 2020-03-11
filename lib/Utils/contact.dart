@@ -1,11 +1,16 @@
 import 'dart:html' as html;
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
+import 'package:portfolio_update/screens/about.dart';
+import 'package:portfolio_update/screens/education.dart';
+import 'package:portfolio_update/screens/main_screen.dart';
+import 'package:portfolio_update/screens/projects.dart';
 import '../Utils/contact_info.dart';
 import '../Utils/nav_button.dart';
 import '../Utils/nav_header.dart';
 import '../responsive_widget.dart';
 
 class Contact extends StatefulWidget {
+  static const routeName = '/Contacts';
   @override
   _ContactState createState() => _ContactState();
 }
@@ -15,25 +20,25 @@ class _ContactState extends State<Contact> {
         NavButton(
           text: "Home",
           onPressed: () {
-            Navigator.popAndPushNamed(context, "/MainScreen");
+            Navigator.of(context).popAndPushNamed(MainScreen.routeName);
           },
         ),
         NavButton(
           text: "About Me",
           onPressed: () {
-            Navigator.pushNamed(context, "/About");
+            Navigator.of(context).pushNamed(About.routeName);
           },
         ),
         NavButton(
           text: "Education",
           onPressed: () {
-            Navigator.pushNamed(context, "/Education");
+            Navigator.of(context).pushNamed(Education.routeName);
           },
         ),
         NavButton(
           text: "Projects",
           onPressed: () {
-            Navigator.pushNamed(context, "/Projects");
+            Navigator.of(context).pushNamed(Projects.routeName);
           },
         ),
         NavButton(
@@ -65,7 +70,7 @@ class _ContactState extends State<Contact> {
             new Container(
               decoration: new BoxDecoration(
                 image: new DecorationImage(
-                  image: new AssetImage("images/port.jpg"),
+                  image: new AssetImage("assets/images/port.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),

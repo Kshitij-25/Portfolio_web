@@ -1,4 +1,4 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 import '../responsive_widget.dart';
 
 class MainInfo extends StatelessWidget {
@@ -13,7 +13,7 @@ class MainInfo extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             image: DecorationImage(
-              image: AssetImage("images/kg.JPG"),
+              image: AssetImage("assets/images/kg.JPG"),
               alignment: Alignment.center,
               fit: BoxFit.cover,
             ),

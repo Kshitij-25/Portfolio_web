@@ -1,11 +1,16 @@
 import 'dart:html' as html;
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
+import 'package:portfolio_update/Utils/contact.dart';
+import 'package:portfolio_update/screens/about.dart';
+import 'package:portfolio_update/screens/education.dart';
+import 'package:portfolio_update/screens/projects.dart';
 import '../Utils/main_info.dart';
 import '../Utils/nav_button.dart';
 import '../Utils/nav_header.dart';
 import '../responsive_widget.dart';
 
 class MainScreen extends StatefulWidget {
+  static const routeName = '/MainScreen';
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -15,19 +20,19 @@ class _MainScreenState extends State<MainScreen> {
         NavButton(
           text: "About Me",
           onPressed: () {
-            Navigator.pushNamed(context, "/About");
+            Navigator.of(context).pushNamed(About.routeName);
           },
         ),
         NavButton(
           text: "Education",
           onPressed: () {
-            Navigator.pushNamed(context, "/Education");
+            Navigator.of(context).pushNamed(Education.routeName);
           },
         ),
         NavButton(
           text: "Projects",
           onPressed: () {
-            Navigator.pushNamed(context, "/Projects");
+            Navigator.of(context).pushNamed(Projects.routeName);
           },
         ),
         NavButton(
@@ -41,7 +46,7 @@ class _MainScreenState extends State<MainScreen> {
         NavButton(
           text: "Contact Me",
           onPressed: () {
-            Navigator.pushNamed(context, "/Contacts");
+            Navigator.of(context).pushNamed(Contact.routeName);
           },
         ),
       ];
@@ -64,9 +69,9 @@ class _MainScreenState extends State<MainScreen> {
         body: Stack(
           children: <Widget>[
             new Container(
-              decoration: new BoxDecoration(
-                image: new DecorationImage(
-                  image: new AssetImage("images/port.jpg"),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/images/port.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
